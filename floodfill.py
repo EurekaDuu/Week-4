@@ -10,6 +10,17 @@ board = [
     "....##############....",
 ]
 
+board2 = [
+    "........7........7....",
+    "......##########..7...",
+    "......#........#......",
+    "......#........#......",
+    "......#........##7##..",
+    "....#7#............#..",
+    "....#............###..",
+    "....##############....",
+]
+
 
 def flood_fill(input_board, old: str, new: str, x: int, y: int):
     """
@@ -45,7 +56,7 @@ def flood_fill(input_board, old: str, new: str, x: int, y: int):
     
     return ["".join(output_board[i]) for i in range(m)]
 
-modified_board = flood_fill(input_board=board, old=".", new="~", x=5, y=12)
+modified_board = flood_fill(input_board=board2, old=".", new="~", x=5, y=12)
 
 for a in modified_board:
     print(a)
